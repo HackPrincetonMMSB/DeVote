@@ -56,7 +56,14 @@ contract Vote{
         return false;
     }
     
+    function validVoter() public returns(bool){
+        if(voterLog[msg.sender] == 0){
+            return false;
+        }
+        return true;
+    }
+    
     function caller() public returns (address){
         return msg.sender;
-    }
+    }   
 }

@@ -55,6 +55,20 @@
     },
     {
       "constant": false,
+      "inputs": [],
+      "name": "validVoter",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
       "inputs": [
         {
           "name": "n",
@@ -135,18 +149,18 @@
       "type": "constructor"
     }
   ],
-  "bytecode": "0x6060604052341561000f57600080fd5b60405161056d38038061056d8339810160405280805182019190602001805182019190505060008090505b81518110156100ca577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff600080848481518110151561007557fe5b9060200190602002015173ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550808060010191505061003a565b82600190805190602001906100e09291906100e9565b50505050610161565b82805482825590600052602060002090810192821561012b579160200282015b8281111561012a578251829060001916905591602001919060010190610109565b5b509050610138919061013c565b5090565b61015e91905b8082111561015a576000816000905550600101610142565b5090565b90565b6103fd806101706000396000f300606060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632f5bde23146100885780633477ee2e146100c35780635c06b06e14610102578063cde9370f1461012b578063cf1eee181461016d578063d832d92f146101ac578063fc9c8d39146101d9575b600080fd5b341561009357600080fd5b6100ad60048080356000191690602001909190505061022e565b6040518082815260200191505060405180910390f35b34156100ce57600080fd5b6100e46004808035906020019091905050610253565b60405180826000191660001916815260200191505060405180910390f35b341561010d57600080fd5b610115610277565b6040518082815260200191505060405180910390f35b341561013657600080fd5b61014f600480803560ff16906020019091905050610284565b60405180826000191660001916815260200191505060405180910390f35b341561017857600080fd5b6101926004808035600019169060200190919050506102ab565b604051808215151515815260200191505060405180910390f35b34156101b757600080fd5b6101bf610350565b604051808215151515815260200191505060405180910390f35b34156101e457600080fd5b6101ec6103c9565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000600260008360001916600019168152602001908152602001600020549050919050565b60018181548110151561026257fe5b90600052602060002090016000915090505481565b6000600180549050905090565b600060018260ff1681548110151561029857fe5b9060005260206000209001549050919050565b60006102b5610350565b15156102c4576000905061034b565b600160026000846000191660001916815260200190815260200160002054016002600084600019166000191681526020019081526020016000208190555060016000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550600190505b919050565b60007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205414156103c157600190506103c6565b600090505b90565b6000339050905600a165627a7a723058201e8948da4d88caf6f292ea20fc9f1fec8a85827d1f6d67155cc5277ecddf0ef50029",
-  "deployedBytecode": "0x606060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632f5bde23146100885780633477ee2e146100c35780635c06b06e14610102578063cde9370f1461012b578063cf1eee181461016d578063d832d92f146101ac578063fc9c8d39146101d9575b600080fd5b341561009357600080fd5b6100ad60048080356000191690602001909190505061022e565b6040518082815260200191505060405180910390f35b34156100ce57600080fd5b6100e46004808035906020019091905050610253565b60405180826000191660001916815260200191505060405180910390f35b341561010d57600080fd5b610115610277565b6040518082815260200191505060405180910390f35b341561013657600080fd5b61014f600480803560ff16906020019091905050610284565b60405180826000191660001916815260200191505060405180910390f35b341561017857600080fd5b6101926004808035600019169060200190919050506102ab565b604051808215151515815260200191505060405180910390f35b34156101b757600080fd5b6101bf610350565b604051808215151515815260200191505060405180910390f35b34156101e457600080fd5b6101ec6103c9565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000600260008360001916600019168152602001908152602001600020549050919050565b60018181548110151561026257fe5b90600052602060002090016000915090505481565b6000600180549050905090565b600060018260ff1681548110151561029857fe5b9060005260206000209001549050919050565b60006102b5610350565b15156102c4576000905061034b565b600160026000846000191660001916815260200190815260200160002054016002600084600019166000191681526020019081526020016000208190555060016000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550600190505b919050565b60007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205414156103c157600190506103c6565b600090505b90565b6000339050905600a165627a7a723058201e8948da4d88caf6f292ea20fc9f1fec8a85827d1f6d67155cc5277ecddf0ef50029",
-  "sourceMap": "25:1693:1:-;;;428:187;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;492:6;501:1;492:10;;488:94;508:9;:16;504:1;:20;488:94;;;569:2;544:8;:22;553:9;563:1;553:12;;;;;;;;;;;;;;;;;;544:22;;;;;;;;;;;;;;;:27;;;;526:3;;;;;;;488:94;;;604:4;591:10;:17;;;;;;;;;;;;:::i;:::-;;428:187;;;25:1693;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
-  "deployedSourceMap": "25:1693:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1020:100;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;224:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;704:94;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;856:92;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1189:225;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1485:145;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1640:76;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1020:100;1080:4;1102:5;:11;1108:4;1102:11;;;;;;;;;;;;;;;;;;1095:18;;1020:100;;;:::o;224:27::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;704:94::-;748:7;774:10;:17;;;;767:24;;704:94;:::o;856:92::-;903:7;928:10;939:1;928:13;;;;;;;;;;;;;;;;;;;;;921:20;;856:92;;;:::o;1189:225::-;1237:4;1257:10;:8;:10::i;:::-;1256:11;1252:53;;;1289:5;1282:12;;;;1252:53;1351:1;1337:5;:11;1343:4;1337:11;;;;;;;;;;;;;;;;;;:15;1323:5;:11;1329:4;1323:11;;;;;;;;;;;;;;;;;:29;;;;1385:1;1362:8;:20;1371:10;1362:20;;;;;;;;;;;;;;;:24;;;;1403:4;1396:11;;1189:225;;;;:::o;1485:145::-;1521:4;1563:2;1539:8;:20;1548:10;1539:20;;;;;;;;;;;;;;;;:26;1536:66;;;1587:4;1580:11;;;;1536:66;1618:5;1611:12;;1485:145;;:::o;1640:76::-;1674:7;1699:10;1692:17;;1640:76;:::o",
-  "source": "pragma solidity ^0.4.4;\n\ncontract Vote{\n    //maps each address to a boolean (has this key voted yet)\n    //mapping (bytes32 => bool) hasVoted;\n    mapping(address => int) voterLog;\n    \n    //array of candidate strings\n    bytes32[] public candidates;\n    \n    //maps each candidate name to an integer holding their votes\n    mapping (bytes32 => uint) votes;\n        \n    \n    //Constructor takes in an array of candidates\n    function Vote(bytes32[] args, address[] addresses){\n        for(uint i = 0; i < addresses.length; i++){\n            voterLog[addresses[i]] = -1;\n        }\n        candidates = args;\n    }\n    \n    /* --- PUBLIC FUNCTIONS --- */\n    \n    //returns the number of candidates\n    function getNumCandidates() public returns (uint256) {\n        return candidates.length;\n    }    \n    \n    //returns the name of the nth candidate\n    function getCandidate(uint8 n) public returns (bytes32){\n        return candidates[n];\n    }\n    \n    //returns the number of votes this candidate has recieved\n    function getVotesForCandidate(bytes32 name) public returns (uint){\n        return votes[name];\n    }\n    \n    //returns true if vote was successful, false otherwise\n    function sendVote(bytes32 name) public returns (bool){\n        if (!eligible()){\n            return false;\n        }\n        \n        votes[name] = votes[name] + 1;\n        voterLog[msg.sender] = 1;\n        return true;\n    }\n    \n    //returns true if the voterID is eligible to cast a vote\n    function eligible() public returns (bool){\n        if(voterLog[msg.sender] == -1){\n            return true;\n        }\n        return false;\n    }\n    \n    function caller() public returns (address){\n        return msg.sender;\n    }\n}",
+  "bytecode": "0x6060604052341561000f57600080fd5b6040516105fe3803806105fe8339810160405280805182019190602001805182019190505060008090505b81518110156100ca577fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff600080848481518110151561007557fe5b9060200190602002015173ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550808060010191505061003a565b82600190805190602001906100e09291906100e9565b50505050610161565b82805482825590600052602060002090810192821561012b579160200282015b8281111561012a578251829060001916905591602001919060010190610109565b5b509050610138919061013c565b5090565b61015e91905b8082111561015a576000816000905550600101610142565b5090565b90565b61048e806101706000396000f30060606040526004361061008e576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632f5bde23146100935780633477ee2e146100ce5780635c06b06e1461010d5780638a4e183814610136578063cde9370f14610163578063cf1eee18146101a5578063d832d92f146101e4578063fc9c8d3914610211575b600080fd5b341561009e57600080fd5b6100b8600480803560001916906020019091905050610266565b6040518082815260200191505060405180910390f35b34156100d957600080fd5b6100ef600480803590602001909190505061028b565b60405180826000191660001916815260200191505060405180910390f35b341561011857600080fd5b6101206102af565b6040518082815260200191505060405180910390f35b341561014157600080fd5b6101496102bc565b604051808215151515815260200191505060405180910390f35b341561016e57600080fd5b610187600480803560ff16906020019091905050610315565b60405180826000191660001916815260200191505060405180910390f35b34156101b057600080fd5b6101ca60048080356000191690602001909190505061033c565b604051808215151515815260200191505060405180910390f35b34156101ef57600080fd5b6101f76103e1565b604051808215151515815260200191505060405180910390f35b341561021c57600080fd5b61022461045a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000600260008360001916600019168152602001908152602001600020549050919050565b60018181548110151561029a57fe5b90600052602060002090016000915090505481565b6000600180549050905090565b6000806000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054141561030d5760009050610312565b600190505b90565b600060018260ff1681548110151561032957fe5b9060005260206000209001549050919050565b60006103466103e1565b151561035557600090506103dc565b600160026000846000191660001916815260200190815260200160002054016002600084600019166000191681526020019081526020016000208190555060016000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550600190505b919050565b60007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205414156104525760019050610457565b600090505b90565b6000339050905600a165627a7a72305820222147e96c77bac3a2e30f3e154bbea9a72eb4d72961760a2f687e856024016b0029",
+  "deployedBytecode": "0x60606040526004361061008e576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632f5bde23146100935780633477ee2e146100ce5780635c06b06e1461010d5780638a4e183814610136578063cde9370f14610163578063cf1eee18146101a5578063d832d92f146101e4578063fc9c8d3914610211575b600080fd5b341561009e57600080fd5b6100b8600480803560001916906020019091905050610266565b6040518082815260200191505060405180910390f35b34156100d957600080fd5b6100ef600480803590602001909190505061028b565b60405180826000191660001916815260200191505060405180910390f35b341561011857600080fd5b6101206102af565b6040518082815260200191505060405180910390f35b341561014157600080fd5b6101496102bc565b604051808215151515815260200191505060405180910390f35b341561016e57600080fd5b610187600480803560ff16906020019091905050610315565b60405180826000191660001916815260200191505060405180910390f35b34156101b057600080fd5b6101ca60048080356000191690602001909190505061033c565b604051808215151515815260200191505060405180910390f35b34156101ef57600080fd5b6101f76103e1565b604051808215151515815260200191505060405180910390f35b341561021c57600080fd5b61022461045a565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000600260008360001916600019168152602001908152602001600020549050919050565b60018181548110151561029a57fe5b90600052602060002090016000915090505481565b6000600180549050905090565b6000806000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054141561030d5760009050610312565b600190505b90565b600060018260ff1681548110151561032957fe5b9060005260206000209001549050919050565b60006103466103e1565b151561035557600090506103dc565b600160026000846000191660001916815260200190815260200160002054016002600084600019166000191681526020019081526020016000208190555060016000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002081905550600190505b919050565b60007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff6000803373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205414156104525760019050610457565b600090505b90565b6000339050905600a165627a7a72305820222147e96c77bac3a2e30f3e154bbea9a72eb4d72961760a2f687e856024016b0029",
+  "sourceMap": "25:1851:1:-;;;428:187;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;492:6;501:1;492:10;;488:94;508:9;:16;504:1;:20;488:94;;;569:2;544:8;:22;553:9;563:1;553:12;;;;;;;;;;;;;;;;;;544:22;;;;;;;;;;;;;;;:27;;;;526:3;;;;;;;488:94;;;604:4;591:10;:17;;;;;;;;;;;;:::i;:::-;;428:187;;;25:1851;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "25:1851:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1020:100;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;224:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;704:94;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1640:145;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;856:92;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1189:225;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1485:145;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1795:76;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1020:100;1080:4;1102:5;:11;1108:4;1102:11;;;;;;;;;;;;;;;;;;1095:18;;1020:100;;;:::o;224:27::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;704:94::-;748:7;774:10;:17;;;;767:24;;704:94;:::o;1640:145::-;1677:4;1719:1;1695:8;:20;1704:10;1695:20;;;;;;;;;;;;;;;;:25;1692:66;;;1742:5;1735:12;;;;1692:66;1774:4;1767:11;;1640:145;;:::o;856:92::-;903:7;928:10;939:1;928:13;;;;;;;;;;;;;;;;;;;;;921:20;;856:92;;;:::o;1189:225::-;1237:4;1257:10;:8;:10::i;:::-;1256:11;1252:53;;;1289:5;1282:12;;;;1252:53;1351:1;1337:5;:11;1343:4;1337:11;;;;;;;;;;;;;;;;;;:15;1323:5;:11;1329:4;1323:11;;;;;;;;;;;;;;;;;:29;;;;1385:1;1362:8;:20;1371:10;1362:20;;;;;;;;;;;;;;;:24;;;;1403:4;1396:11;;1189:225;;;;:::o;1485:145::-;1521:4;1563:2;1539:8;:20;1548:10;1539:20;;;;;;;;;;;;;;;;:26;1536:66;;;1587:4;1580:11;;;;1536:66;1618:5;1611:12;;1485:145;;:::o;1795:76::-;1829:7;1854:10;1847:17;;1795:76;:::o",
+  "source": "pragma solidity ^0.4.4;\n\ncontract Vote{\n    //maps each address to a boolean (has this key voted yet)\n    //mapping (bytes32 => bool) hasVoted;\n    mapping(address => int) voterLog;\n    \n    //array of candidate strings\n    bytes32[] public candidates;\n    \n    //maps each candidate name to an integer holding their votes\n    mapping (bytes32 => uint) votes;\n        \n    \n    //Constructor takes in an array of candidates\n    function Vote(bytes32[] args, address[] addresses){\n        for(uint i = 0; i < addresses.length; i++){\n            voterLog[addresses[i]] = -1;\n        }\n        candidates = args;\n    }\n    \n    /* --- PUBLIC FUNCTIONS --- */\n    \n    //returns the number of candidates\n    function getNumCandidates() public returns (uint256) {\n        return candidates.length;\n    }    \n    \n    //returns the name of the nth candidate\n    function getCandidate(uint8 n) public returns (bytes32){\n        return candidates[n];\n    }\n    \n    //returns the number of votes this candidate has recieved\n    function getVotesForCandidate(bytes32 name) public returns (uint){\n        return votes[name];\n    }\n    \n    //returns true if vote was successful, false otherwise\n    function sendVote(bytes32 name) public returns (bool){\n        if (!eligible()){\n            return false;\n        }\n        \n        votes[name] = votes[name] + 1;\n        voterLog[msg.sender] = 1;\n        return true;\n    }\n    \n    //returns true if the voterID is eligible to cast a vote\n    function eligible() public returns (bool){\n        if(voterLog[msg.sender] == -1){\n            return true;\n        }\n        return false;\n    }\n    \n    function validVoter() public returns(bool){\n        if(voterLog[msg.sender] == 0){\n            return false;\n        }\n        return true;\n    }\n    \n    function caller() public returns (address){\n        return msg.sender;\n    }   \n}",
   "sourcePath": "/Users/michaelzman/Documents/workspace/Devote/contracts/Vote.sol",
   "ast": {
     "attributes": {
       "absolutePath": "/Users/michaelzman/Documents/workspace/Devote/contracts/Vote.sol",
       "exportedSymbols": {
         "Vote": [
-          201
+          219
         ]
       }
     },
@@ -176,17 +190,17 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            201
+            219
           ],
           "name": "Vote",
-          "scope": 202
+          "scope": 220
         },
         "children": [
           {
             "attributes": {
               "constant": false,
               "name": "voterLog",
-              "scope": 201,
+              "scope": 219,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(address => int256)",
@@ -231,7 +245,7 @@
             "attributes": {
               "constant": false,
               "name": "candidates",
-              "scope": 201,
+              "scope": 219,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "bytes32[] storage ref",
@@ -268,7 +282,7 @@
             "attributes": {
               "constant": false,
               "name": "votes",
-              "scope": 201,
+              "scope": 219,
               "stateVariable": true,
               "storageLocation": "default",
               "type": "mapping(bytes32 => uint256)",
@@ -319,7 +333,7 @@
               ],
               "name": "Vote",
               "payable": false,
-              "scope": 201,
+              "scope": 219,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -791,7 +805,7 @@
               ],
               "name": "getNumCandidates",
               "payable": false,
-              "scope": 201,
+              "scope": 219,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -904,7 +918,7 @@
               ],
               "name": "getCandidate",
               "payable": false,
-              "scope": 201,
+              "scope": 219,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1051,7 +1065,7 @@
               ],
               "name": "getVotesForCandidate",
               "payable": false,
-              "scope": 201,
+              "scope": 219,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1198,7 +1212,7 @@
               ],
               "name": "sendVote",
               "payable": false,
-              "scope": 201,
+              "scope": 219,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1573,7 +1587,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 213,
+                                      "referencedDeclaration": 231,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -1665,7 +1679,7 @@
               ],
               "name": "eligible",
               "payable": false,
-              "scope": 201,
+              "scope": 219,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1779,7 +1793,7 @@
                                       "overloadedDeclarations": [
                                         null
                                       ],
-                                      "referencedDeclaration": 213,
+                                      "referencedDeclaration": 231,
                                       "type": "msg",
                                       "value": "msg"
                                     },
@@ -1920,9 +1934,9 @@
               "modifiers": [
                 null
               ],
-              "name": "caller",
+              "name": "validVoter",
               "payable": false,
-              "scope": 201,
+              "scope": 219,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "public"
@@ -1937,7 +1951,7 @@
                 "children": [],
                 "id": 192,
                 "name": "ParameterList",
-                "src": "1655:2:1"
+                "src": "1659:2:1"
               },
               {
                 "children": [
@@ -1945,7 +1959,247 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 200,
+                      "scope": 209,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 193,
+                        "name": "ElementaryTypeName",
+                        "src": "1677:4:1"
+                      }
+                    ],
+                    "id": 194,
+                    "name": "VariableDeclaration",
+                    "src": "1677:4:1"
+                  }
+                ],
+                "id": 195,
+                "name": "ParameterList",
+                "src": "1676:6:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "==",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "int256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 62,
+                                  "type": "mapping(address => int256)",
+                                  "value": "voterLog"
+                                },
+                                "id": 196,
+                                "name": "Identifier",
+                                "src": "1695:8:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "referencedDeclaration": null,
+                                  "type": "address"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 231,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 197,
+                                    "name": "Identifier",
+                                    "src": "1704:3:1"
+                                  }
+                                ],
+                                "id": 198,
+                                "name": "MemberAccess",
+                                "src": "1704:10:1"
+                              }
+                            ],
+                            "id": 199,
+                            "name": "IndexAccess",
+                            "src": "1695:20:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "30",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 0",
+                              "value": "0"
+                            },
+                            "id": 200,
+                            "name": "Literal",
+                            "src": "1719:1:1"
+                          }
+                        ],
+                        "id": 201,
+                        "name": "BinaryOperation",
+                        "src": "1695:25:1"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "functionReturnParameters": 195
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "66616c7365",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "bool",
+                                  "type": "bool",
+                                  "value": "false"
+                                },
+                                "id": 202,
+                                "name": "Literal",
+                                "src": "1742:5:1"
+                              }
+                            ],
+                            "id": 203,
+                            "name": "Return",
+                            "src": "1735:12:1"
+                          }
+                        ],
+                        "id": 204,
+                        "name": "Block",
+                        "src": "1721:37:1"
+                      }
+                    ],
+                    "id": 205,
+                    "name": "IfStatement",
+                    "src": "1692:66:1"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 195
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "hexvalue": "74727565",
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "subdenomination": null,
+                          "token": "bool",
+                          "type": "bool",
+                          "value": "true"
+                        },
+                        "id": 206,
+                        "name": "Literal",
+                        "src": "1774:4:1"
+                      }
+                    ],
+                    "id": 207,
+                    "name": "Return",
+                    "src": "1767:11:1"
+                  }
+                ],
+                "id": 208,
+                "name": "Block",
+                "src": "1682:103:1"
+              }
+            ],
+            "id": 209,
+            "name": "FunctionDefinition",
+            "src": "1640:145:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "caller",
+              "payable": false,
+              "scope": 219,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 210,
+                "name": "ParameterList",
+                "src": "1810:2:1"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 218,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1958,25 +2212,25 @@
                           "name": "address",
                           "type": "address"
                         },
-                        "id": 193,
+                        "id": 211,
                         "name": "ElementaryTypeName",
-                        "src": "1674:7:1"
+                        "src": "1829:7:1"
                       }
                     ],
-                    "id": 194,
+                    "id": 212,
                     "name": "VariableDeclaration",
-                    "src": "1674:7:1"
+                    "src": "1829:7:1"
                   }
                 ],
-                "id": 195,
+                "id": 213,
                 "name": "ParameterList",
-                "src": "1673:9:1"
+                "src": "1828:9:1"
               },
               {
                 "children": [
                   {
                     "attributes": {
-                      "functionReturnParameters": 195
+                      "functionReturnParameters": 213
                     },
                     "children": [
                       {
@@ -1997,43 +2251,43 @@
                               "overloadedDeclarations": [
                                 null
                               ],
-                              "referencedDeclaration": 213,
+                              "referencedDeclaration": 231,
                               "type": "msg",
                               "value": "msg"
                             },
-                            "id": 196,
+                            "id": 214,
                             "name": "Identifier",
-                            "src": "1699:3:1"
+                            "src": "1854:3:1"
                           }
                         ],
-                        "id": 197,
+                        "id": 215,
                         "name": "MemberAccess",
-                        "src": "1699:10:1"
+                        "src": "1854:10:1"
                       }
                     ],
-                    "id": 198,
+                    "id": 216,
                     "name": "Return",
-                    "src": "1692:17:1"
+                    "src": "1847:17:1"
                   }
                 ],
-                "id": 199,
+                "id": 217,
                 "name": "Block",
-                "src": "1682:34:1"
+                "src": "1837:34:1"
               }
             ],
-            "id": 200,
+            "id": 218,
             "name": "FunctionDefinition",
-            "src": "1640:76:1"
+            "src": "1795:76:1"
           }
         ],
-        "id": 201,
+        "id": 219,
         "name": "ContractDefinition",
-        "src": "25:1693:1"
+        "src": "25:1851:1"
       }
     ],
-    "id": 202,
+    "id": 220,
     "name": "SourceUnit",
-    "src": "0:1718:1"
+    "src": "0:1876:1"
   },
   "compiler": {
     "name": "solc",
@@ -2043,9 +2297,9 @@
     "4447": {
       "events": {},
       "links": {},
-      "address": "0x2445bc665aefca58d2137baf26a62edb38cbc274"
+      "address": "0xaba7902442c5739c6f0c182691d48d63d06a212e"
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2017-11-11T18:25:25.743Z"
+  "updatedAt": "2017-11-11T20:03:50.692Z"
 }
