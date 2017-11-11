@@ -75,6 +75,7 @@ function getCandidates() {
 
 function getVoteCounts(){
     var voteInstance;
+    var i = 0;
     contracts.Vote.deployed().then(
         function(instance) {
             voteInstance = instance;
@@ -85,10 +86,16 @@ function getVoteCounts(){
                             function(result) {
                                 candidates[bar] = result['c'][0];
                                 console.log(bar + " : " + candidates[bar]);
+                                i++;
+                                if(i==numCandidates-1){
+                                    //successfully loaded all vote counts
+                                    console.log("Loaded all vote counts");
+                                    updateCounts();
+                                }
                             }
                         )
                     }(name));
-                }           
+                }         
             }
             return candidates;
         }).catch(function(err) {
