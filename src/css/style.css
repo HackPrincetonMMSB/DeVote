@@ -95,7 +95,7 @@ figure {
 }
 .fh5co-cover.fh5co-hero-2,
 .fh5co-hero.fh5co-hero-2 {
-  height: 600px;
+  height: 300px;
 }
 .fh5co-cover.fh5co-hero-2 .fh5co-overlay,
 .fh5co-hero.fh5co-hero-2 .fh5co-overlay {
@@ -136,7 +136,7 @@ figure {
   opacity: .9;
 }
 .fh5co-cover.fh5co-cover_2 {
-  height: 600px;
+  height: 300px;
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover.fh5co-cover_2 {
@@ -145,7 +145,7 @@ figure {
   }
 }
 .fh5co-cover .desc {
-  top: 50%;
+  top: 55%;
   position: absolute;
   width: 100%;
   margin-top: -80px;

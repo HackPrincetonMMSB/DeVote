@@ -51,3 +51,5 @@ function vote(name){
     console.log("Voting for: " + name);
     sendVote(name);
 }
+
+function load
