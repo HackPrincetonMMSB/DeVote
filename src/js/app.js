@@ -137,11 +137,7 @@ function sendVote(candidate) {
     });
 }
 
-<<<<<<< HEAD
-/*function getSten(){
-=======
 function getAddr(){
->>>>>>> af59f4fec823c83c6d99b6b5b792f2a3bcd98676
     var voteInstance;
     contracts.Vote.deployed().then(
         function(instance) {
@@ -153,7 +149,7 @@ function getAddr(){
             )
         }           
     );
-}*/
+}
 
 $(function() {
     $(window).load(function() {
