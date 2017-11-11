@@ -84,14 +84,14 @@
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 text-center heading-section animate-box">
                             <h3>Candidates</h3>
-                            <p>Select your choice for the next president of Princeton University.</p>
+                            <p>Select your choice for the next president of Princeton University</p>
                         </div>
                     </div>
                 </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4 col-sm-4">
-                            <div class="fh5co-grid animate-box" style="background-image: url(images/work-1.jpg);">
+                            <div class="fh5co-grid animate-box" style="background-image: url(images/candidate-1.jpg);">
                                 <a class="image-popup text-center" href="#">
                                     <div class="prod-title">
                                         <h3 class = "can-title"></h3>
@@ -101,21 +101,21 @@
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-4">
-                            <div class="fh5co-grid animate-box" style="background-image: url(images/work-2.jpg);">
+                            <div class="fh5co-grid animate-box" style="background-image: url(images/candidate-2.jpg);">
                                 <a class="image-popup text-center" href="#">
                                     <div class="prod-title">
                                         <h3 class = "can-title"></h3>
-                                        <span>The Black Party</span>
+                                        <span>The Princeton Party</span>
                                     </div>
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-4">
-                            <div class="fh5co-grid animate-box" style="background-image: url(images/work-3.jpg);">
+                            <div class="fh5co-grid animate-box" style="background-image: url(images/candidate-3.jpg);">
                                 <a class="image-popup text-center" href="#">
                                     <div class="prod-title">
                                         <h3 class = "can-title"></h3>
-                                        <span>The Orange and Black Party</span>
+                                        <span>The Tiger Party</span>
                                     </div>
                                 </a>
                             </div>
@@ -147,9 +147,8 @@
 
     </div>
     <!-- END fh5co-wrapper -->
-
+    </div>
     <!-- jQuery -->
-
 
     <script src="js/jquery.min.js"></script>
     <!-- jQuery Easing -->
@@ -164,9 +163,20 @@
     <script src="js/hoverIntent.js"></script>
     <script src="js/superfish.js"></script>
 
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="contractjs/web3.min.js"></script>
+    <script src="contractjs/truffle-contract.js"></script>
+    <script src="contractjs/app.js"></script>
+    <script src="contractjs/io.js"></script>
+    
+    <script>
+        $(window).load(function() {
+            init("vote");
+        });
+    </script>
+    
     <!-- Main JS (Do not remove) -->
     <script src="js/main.js"></script>
-
 </body>
 </html>
 

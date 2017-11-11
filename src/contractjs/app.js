@@ -4,9 +4,11 @@ var contracts = {};
 /* our instance variables */
 var candidates = {};
 var numCandidates;
+var page;
 
-
-function init() {
+function init(args) {
+    page = args;
+    console.log("Initializing page: " + page);
     return initWeb3();
 }
 
@@ -32,13 +34,10 @@ function initContract(){
         contracts.Vote.setProvider(web3Provider);
 
         // Use our contract to retrieve and mark the adopted pets
-        return getCandidates();
+        if(page == "vote"){
+            getCandidates()
+        };
     });
-    return bindEvents();
-}
-
-function bindEvents() {
-    console.log("Here's where we bind the events");
 }
 
 //updates the lists of candidates by calling for number of candidates and making n calls for each candidate
@@ -59,8 +58,10 @@ function getCandidates() {
                                     var name = web3.toAscii(hexName);
                                     candidates[name] = 0;
                                     if(foo == numCandidates-1){
-                                        console.log(candidates);
-                                        getVoteCounts();
+                                        if(page == "vote"){
+                                            //updates the data on the vote page;
+                                            setCandidates();
+                                        }
                                     }
                                 }
                             )}(i));
@@ -86,7 +87,7 @@ function getVoteCounts(){
                                 candidates[bar] = result['c'][0];
                                 console.log(bar + " : " + candidates[bar]);
                                 i++;
-                                if(i==numCandidates-1){
+                                if(i==numCandidates){
                                     //successfully loaded all vote counts
                                     console.log("Loaded all vote counts");
                                     updateCounts();
@@ -103,6 +104,7 @@ function getVoteCounts(){
 }
 
 //returns true IFF address is valid AND has not voted yet  
+//Called ONCE: when button is first pressed
 function canVote(){
     var voteInstance;
     contracts.Vote.deployed().then(
@@ -110,8 +112,13 @@ function canVote(){
             voteInstance = instance;
             voteInstance.eligible.call().then(function(result){
                 console.log(result);
-                loadVotePage();
-                return result;
+                if(page == "home"){
+                    if(result){
+                        loadVotePage();
+                    } else {
+                        validVoter();
+                    }
+                }
             });
         }).catch(function(err) {
         console.log(err.message);
@@ -119,13 +126,18 @@ function canVote(){
 }
 
 //returns true IFF address is valid
+//Called ONCE: IFF canVote is false
 function validVoter(){
     var voteInstance;
     contracts.Vote.deployed().then(
         function(instance) {
             voteInstance = instance;
             voteInstance.validVoter.call().then(function(result){
-                console.log(result); 
+                if(result){
+                    loadResultPage();
+                } else {
+                    handleInvalidVoter();
+                }
                 return result;
             });
         }).catch(function(err) {
@@ -173,11 +185,5 @@ function getAddr(){
     );
 }
 
-
-$(function() {
-    $(window).load(function() {
-        init();
-    });
-});
 
 
