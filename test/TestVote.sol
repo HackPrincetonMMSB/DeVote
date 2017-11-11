@@ -26,26 +26,24 @@ contract TestVote{
         Assert.equal(candidate, expected, "Not equal (3)");
     }
     
+    /*
     function testCanGetVoteForCandidate() {
         uint numVotes = vote.getVotesForCandidate("Sten");
         Assert.equal(0, numVotes, "Votes not initialized to 0");
-        vote.sendVote("Jim", "Sten");
+        vote.sendVote("Sten");
         numVotes = vote.getVotesForCandidate("Sten");
         Assert.equal(1, numVotes, "Votes could not increment");
-    }
+    }*/
     
     
     function testCanVote(){
-        bool result = vote.eligible("Michael");
+        bool result = vote.eligible();
         Assert.equal(true, result, "Michael can't vote");
         
-        result = vote.sendVote("Michael","Sten");
+        result = vote.sendVote("Sten");
         Assert.equal(true, result, "Vote failed");
         
-        result = vote.eligible("Michael");
+        result = vote.eligible();
         Assert.equal(false, result, "Michael shouldn't be able to vote");
-        
-        result = vote.eligible("Bobby");
-        Assert.equal(true, result, "Bobby should be able to vote");
     }
 }

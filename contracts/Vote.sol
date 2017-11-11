@@ -2,8 +2,10 @@ pragma solidity ^0.4.4;
 
 contract Vote{
     
-    //maps each private key to a boolean (has this key voted yet)
-    mapping (bytes32 => bool) hasVoted;
+    //maps each address to a boolean (has this key voted yet)
+    //mapping (bytes32 => bool) hasVoted;
+    mapping(address => int) voterLog;
+    
     
     //array of candidate strings
     bytes32[] public candidates;
@@ -11,12 +13,13 @@ contract Vote{
     //maps each candidate name to an integer holding their votes
     mapping (bytes32 => uint) votes;
         
+    
     //Constructor takes in an array of candidates
-    function Vote(bytes32[] args){
+    function Vote(bytes32[] args, address[] addresses){
+        for(uint i = 0; i < addresses.length; i++){
+            voterLog[addresses[i]] = -1;
+        }
         candidates = args;
-        votes[candidates[0]] = 0;
-        votes[candidates[1]] = 0;
-        votes[candidates[2]] = 0;
     }
     
     /* --- PUBLIC FUNCTIONS --- */
@@ -37,23 +40,21 @@ contract Vote{
     }
     
     //returns true if vote was successful, false otherwise
-    function sendVote(bytes32 voterID, bytes32 name) public returns (bool){
-        if (!eligible(voterID)){
+    function sendVote(bytes32 name) public returns (bool){
+        if (!eligible()){
             return false;
         }
         
         votes[name] = votes[name] + 1;
-        
-        hasVoted[voterID] = true;
+        voterLog[msg.sender] = 1;
         return true;
     }
     
     //returns true if the voterID is eligible to cast a vote
-    function eligible(bytes32 voterID) public returns (bool){
-        if(hasVoted[voterID] == true){
-            return false;
+    function eligible() public returns (bool){
+        if(voterLog[msg.sender] == -1){
+            return true;
         }
-        return true;
-    }
-    
+        return false;
+    }   
 }
