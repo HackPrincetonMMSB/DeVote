@@ -1,11 +1,9 @@
 pragma solidity ^0.4.4;
 
 contract Vote{
-    
     //maps each address to a boolean (has this key voted yet)
     //mapping (bytes32 => bool) hasVoted;
     mapping(address => int) voterLog;
-    
     
     //array of candidate strings
     bytes32[] public candidates;
@@ -56,5 +54,9 @@ contract Vote{
             return true;
         }
         return false;
-    }   
+    }
+    
+    function caller() public returns (address){
+        return msg.sender;
+    }
 }
