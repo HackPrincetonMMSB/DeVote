@@ -19,7 +19,7 @@ function loadVotePage(){
 //called from validVoter
 function loadResultPage(){
     console.log("Loading result page");
-    
+     window.location ="/result.html";
 }
 
 
@@ -30,13 +30,24 @@ function handleInvalidVoter(){
 
 function setCandidates(){
     console.log("Received candidates, setting values");
+    var titles = document.getElementsByClassName("can-title");
+    var buttons = document.getElementsByClassName("vote-button");
     
-    document.getElementsByClassName("can-title")[0].innerHTML
     var i =0;
     for (var key in candidates) {
         if (candidates.hasOwnProperty(key)) {
-            document.getElementsByClassName("can-title")[i].innerHTML = key;
+            titles[i].innerHTML = key;
+            (function(foo){
+                buttons[i].addEventListener("click", function(){
+                vote(foo);
+                });
+            }(key));
             i++;
         }
     }
+}
+
+function vote(name){
+    console.log("Voting for: " + name);
+    sendVote(name);
 }

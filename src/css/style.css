@@ -24,6 +24,14 @@ body.fh5co-offcanvas {
   overflow: hidden;
 }
 
+#fh5co-logo a{
+    color: orange !important;
+}
+
+#fh5co-work-section{
+    padding-bottom:0px !important;
+}
+
 a {
   color: #FCC72C;
   -webkit-transition: 0.5s;
@@ -118,12 +126,13 @@ figure {
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover {
-    heifght: inherit;
+    height: inherit;
     padding: 3em 0;
   }
 }
+
 .fh5co-cover .btn {
-  padding: 1em 5em;
+  padding: .4em 1.5em;
   opacity: .9;
 }
 .fh5co-cover.fh5co-cover_2 {
@@ -131,7 +140,7 @@ figure {
 }
 @media screen and (max-width: 768px) {
   .fh5co-cover.fh5co-cover_2 {
-    heifght: inherit;
+    height: inherit;
     padding: 3em 0;
   }
 }
@@ -152,7 +161,7 @@ figure {
 .fh5co-cover .desc h2 {
   color: #fff;
   text-transform: uppercase;
-  font-size: 60px;
+  font-size: 50px;
   margin-bottom: 10px;
 }
 @media screen and (max-width: 768px) {
@@ -163,9 +172,10 @@ figure {
 .fh5co-cover .desc span {
   display: block;
   margin-bottom: 30px;
-  font-size: 28px;
+  font-size: 25px;
   letter-spacing: 1px;
 }
+
 .fh5co-cover .desc span a {
   color: #fff;
 }
@@ -303,7 +313,7 @@ figure {
 #fh5co-logo {
   position: relative;
   z-index: 2;
-  font-size: 28px;
+  font-size: 38px;
   text-transform: uppercase;
   margin-top: 35px;
   font-weight: 300;
@@ -819,7 +829,7 @@ figure {
 
 #footer {
   background: #222831;
-  padding: 60px 0 40px;
+  padding: 20px 0 20px;
 }
 #footer p {
   color: rgba(255, 255, 255, 0.3);
@@ -835,6 +845,7 @@ figure {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+    font-size: 25px;
 }
 
 .btn {

@@ -112,7 +112,7 @@ function canVote(){
             voteInstance = instance;
             voteInstance.eligible.call().then(function(result){
                 console.log(result);
-                if(page == "home"){
+                if(page == "main"){
                     if(result){
                         loadVotePage();
                     } else {
@@ -163,6 +163,7 @@ function sendVote(candidate) {
             voteInstance.sendVote(candidate, {from: account}).then(
                 function(sendResult){
                     console.log(sendResult);
+                    loadResultPage();
                 }
             );
         }).catch(function(err) {
