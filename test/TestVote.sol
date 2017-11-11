@@ -36,7 +36,12 @@ contract TestVote{
     }*/
     
     
+    event test_value(int indexed val);
+
     function testCanVote(){
+        //address add = 0x627306090abab3a6e1400e9345bc60c78a8bef57;
+        //Assert.equal(add,vote.caller(), "Wrong address");
+    
         bool result = vote.eligible();
         Assert.equal(true, result, "Michael can't vote");
         

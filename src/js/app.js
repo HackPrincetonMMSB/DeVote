@@ -111,9 +111,8 @@ function canVote(){
 }
 
 
-function sendVote(myName, name) {
+function sendVote(candidate) {
     //event.preventDefault();
-
     var voteInstance;
 
     web3.eth.getAccounts(function(error, accounts) {
@@ -127,7 +126,7 @@ function sendVote(myName, name) {
             voteInstance = instance;
             console.log("Sending vote");
             // Execute adopt as a transaction by sending account
-            voteInstance.sendVote(myName, name, {from: account}).then(
+            voteInstance.sendVote(candidate, {from: account}).then(
                 function(sendResult){
                     console.log(sendResult);
                 }
@@ -138,12 +137,16 @@ function sendVote(myName, name) {
     });
 }
 
+<<<<<<< HEAD
 /*function getSten(){
+=======
+function getAddr(){
+>>>>>>> af59f4fec823c83c6d99b6b5b792f2a3bcd98676
     var voteInstance;
     contracts.Vote.deployed().then(
         function(instance) {
             voteInstance = instance;
-            voteInstance.getVotesForCandidate.call("Sten").then(
+            voteInstance.caller.call().then(
                 function(result) {
                     console.log(result);
                 }
@@ -157,3 +160,5 @@ $(function() {
         init();
     });
 });
+
+
