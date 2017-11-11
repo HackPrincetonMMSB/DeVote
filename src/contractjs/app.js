@@ -103,14 +103,30 @@ function getVoteCounts(){
     });
 }
 
+//returns true IFF address is valid AND has not voted yet  
 function canVote(){
-    var currentAddress = this;
     var voteInstance;
     contracts.Vote.deployed().then(
         function(instance) {
             voteInstance = instance;
-            voteInstance.eligible.call(currentAddress).then(function(result){
+            voteInstance.eligible.call().then(function(result){
                 console.log(result); 
+                return result;
+            });
+        }).catch(function(err) {
+        console.log(err.message);
+    });
+}
+
+//returns true IFF address is valid
+function validVoter(){
+    var voteInstance;
+    contracts.Vote.deployed().then(
+        function(instance) {
+            voteInstance = instance;
+            voteInstance.validVoter.call().then(function(result){
+                console.log(result); 
+                return result;
             });
         }).catch(function(err) {
         console.log(err.message);
@@ -119,7 +135,6 @@ function canVote(){
 
 
 function sendVote(candidate) {
-    //event.preventDefault();
     var voteInstance;
 
     web3.eth.getAccounts(function(error, accounts) {
@@ -157,6 +172,7 @@ function getAddr(){
         }           
     );
 }
+
 
 $(function() {
     $(window).load(function() {
