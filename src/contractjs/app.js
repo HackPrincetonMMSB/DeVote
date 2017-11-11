@@ -2,7 +2,6 @@ var web3Provider = null;
 var contracts = {};
 
 /* our instance variables */
-
 var candidates = {};
 var numCandidates;
 
@@ -110,7 +109,8 @@ function canVote(){
         function(instance) {
             voteInstance = instance;
             voteInstance.eligible.call().then(function(result){
-                console.log(result); 
+                console.log(result);
+                loadVotePage();
                 return result;
             });
         }).catch(function(err) {
