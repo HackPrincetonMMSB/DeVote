@@ -96,12 +96,13 @@ function getVoteCounts(){
     });
 }
 
-function canVote(voterID){
+function canVote(){
+    var currentAddress = this;
     var voteInstance;
     contracts.Vote.deployed().then(
         function(instance) {
             voteInstance = instance;
-            voteInstance.eligible.call(voterID).then(function(result){
+            voteInstance.eligible.call(currentAddress).then(function(result){
                 console.log(result); 
             });
         }).catch(function(err) {
@@ -137,7 +138,7 @@ function sendVote(myName, name) {
     });
 }
 
-function getSten(){
+/*function getSten(){
     var voteInstance;
     contracts.Vote.deployed().then(
         function(instance) {
@@ -149,7 +150,7 @@ function getSten(){
             )
         }           
     );
-}
+}*/
 
 $(function() {
     $(window).load(function() {
