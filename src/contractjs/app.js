@@ -1,3 +1,8 @@
+/* app.js */
+/* Handles client-blockchain interactions. Defines a set of functions that each performs client-side actions as the
+ * result of web3 callback functions */
+
+
 var web3Provider = null;
 var contracts = {};
 
@@ -125,21 +130,7 @@ function canVote(){
                 }
             });
         }).catch(function(err) {
-        console.log(err.message);
-        if (err.message == "Invalid JSON RPC response: \"\"") {
-            /*var div = document.createElement("div");
-            div.style.position = "absolute";
-            div.style.width = $(document).width;
-            div.style.height = $(document).height;
-            div.style.top = "0px";
-            div.style.left = "0px";
-            div.style.background = "black";
-            div.style.color = "black";
-            //div.style.opacity = 0.5;
-            div.innerHTML = "You don't have MetaMask! This is good. This means you're a sane human being. But you also need to get MetaMask.";
-
-            document.getElementById("metaMaskCover").appendChild(div);*/
-            
+        if (err.message == "Contract has not been deployed to detected network (network/artifact mismatch)") {     
             document.getElementById("metaMaskCover").style.visibility = "visible";
         }
     });
