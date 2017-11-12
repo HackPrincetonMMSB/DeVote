@@ -122,6 +122,22 @@ function canVote(){
             });
         }).catch(function(err) {
         console.log(err.message);
+        if (err.message == "Invalid JSON RPC response: \"\"") {
+            /*var div = document.createElement("div");
+            div.style.position = "absolute";
+            div.style.width = $(document).width;
+            div.style.height = $(document).height;
+            div.style.top = "0px";
+            div.style.left = "0px";
+            div.style.background = "black";
+            div.style.color = "black";
+            //div.style.opacity = 0.5;
+            div.innerHTML = "You don't have MetaMask! This is good. This means you're a sane human being. But you also need to get MetaMask.";
+
+            document.getElementById("metaMaskCover").appendChild(div);*/
+            
+            document.getElementById("metaMaskCover").style.visibility = "visible";
+        }
     });
 }
 
