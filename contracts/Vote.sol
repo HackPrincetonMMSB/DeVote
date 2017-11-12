@@ -11,7 +11,6 @@ contract Vote{
     //maps each candidate name to an integer holding their votes
     mapping (bytes32 => uint) votes;
         
-    
     //Constructor takes in an array of candidates
     function Vote(bytes32[] args, address[] addresses){
         for(uint i = 0; i < addresses.length; i++){
@@ -48,7 +47,7 @@ contract Vote{
         return true;
     }
     
-    //returns true if the voterID is eligible to cast a vote
+    //returns true if the address is eligible to cast a vote
     function eligible() public returns (bool){
         if(voterLog[msg.sender] == -1){
             return true;
@@ -56,6 +55,7 @@ contract Vote{
         return false;
     }
     
+    //returns true if the voter address is valid (regardless of if they have already voted)
     function validVoter() public returns(bool){
         if(voterLog[msg.sender] == 0){
             return false;
@@ -63,6 +63,7 @@ contract Vote{
         return true;
     }
     
+    //returns the address of the caller
     function caller() public returns (address){
         return msg.sender;
     }   
