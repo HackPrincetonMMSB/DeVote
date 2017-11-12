@@ -34,9 +34,9 @@ function initContract(){
         contracts.Vote.setProvider(web3Provider);
 
         // Use our contract to retrieve and mark the adopted pets
-        if(page == "vote"){
+        if(page == "vote" || page == "results"){
             getCandidates()
-        };
+        }
     });
 }
 
@@ -62,6 +62,11 @@ function getCandidates() {
                                             //updates the data on the vote page;
                                             setCandidates();
                                         }
+                                        
+                                        if(page == "results"){
+                                            getVoteCounts();
+                                        }
+                                        console.log(candidates);
                                     }
                                 }
                             )}(i));
@@ -97,7 +102,6 @@ function getVoteCounts(){
                     }(name));
                 }         
             }
-            return candidates;
         }).catch(function(err) {
         console.log(err.message);
     });

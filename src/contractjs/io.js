@@ -1,7 +1,6 @@
 function updateCounts(){
-    
-    
-    
+    console.log("Recieved vote data");
+    console.log(candidates);
 }
 
 function handleVoteButton() {
@@ -19,7 +18,7 @@ function loadVotePage(){
 //called from validVoter
 function loadResultPage(){
     console.log("Loading result page");
-     window.location ="/result.html";
+    window.location ="/result.html";
 }
 
 
@@ -51,5 +50,3 @@ function vote(name){
     console.log("Voting for: " + name);
     sendVote(name);
 }
-
-function load
