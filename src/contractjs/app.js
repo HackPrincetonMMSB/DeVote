@@ -1,22 +1,26 @@
 /* app.js */
-/* Handles client-blockchain interactions. Defines a set of functions that each performs client-side actions as the
- * result of web3 callback functions */
-
+/*Main front-end Javascript. Asynchronous Javascript is used since our architecture has layers of dependencies on fetched data.*/
+/* Handles client-blockchain interactions. Defines a set of functions that each performs client-side actions as the result of web3 callback functions */
 
 var web3Provider = null;
 var contracts = {};
 
-/* our instance variables */
+/* instance variables */
+//Object containing candidate: votes pairs
 var candidates = {};
+//Number of total candidates
 var numCandidates;
+//which page the io.js is operating on (state based code)
 var page;
 
+//Basic handler to call initializer for Web3
 function init(args) {
     page = args;
     console.log("Initializing page: " + page);
     return initWeb3();
 }
 
+//Initializer for Web3. Also calls the initializer for the smart contract.
 function initWeb3() {
     // Is there is an injected web3 instance?
     if (typeof web3 !== 'undefined') {
@@ -29,6 +33,7 @@ function initWeb3() {
     return initContract();
 }
 
+//Initializer for the smart contract. Also calls the getCandidates function to load the possible candidates to vote for.
 function initContract(){
     $.getJSON('Vote.json', function(data) {
         // Get the necessary contract artifact file and instantiate it with truffle-contract
@@ -55,14 +60,14 @@ function getCandidates() {
             voteInstance = instance;
             voteInstance.getNumCandidates.call().then(
                 function(result){
-                    numCandidates = result['c'][0];
+                    numCandidates = result['c'][0]; //Format of the JSON object requires us to get the number of candidates like this
                     for(var i=0;i<numCandidates;i++){
-                        (function(foo){
+                        (function(foo){ //anonymous function to make sure asynchronous Javascript function gets called for every i.
                             voteInstance.getCandidate.call(foo).then(
                                 function(hexName){
                                     var name = web3.toAscii(hexName);
                                     candidates[name] = 0;
-                                    if(foo == numCandidates-1){
+                                    if(foo == numCandidates-1){ //Making sure this is called after we initialize.
                                         if(page == "vote"){
                                             //updates the data on the vote page;
                                             setCandidates();
@@ -90,11 +95,11 @@ function getVoteCounts(){
         function(instance) {
             voteInstance = instance;
             for(var name in candidates) {
-                if (candidates.hasOwnProperty(name)) {
+                if (candidates.hasOwnProperty(name)) { //Maps have default objects, so we need to make sure it's not one of those.
                     (function(bar){
                         voteInstance.getVotesForCandidate.call(bar).then(
                             function(result) {
-                                candidates[bar] = result['c'][0];
+                                candidates[bar] = result['c'][0]; //Way to get the number of votes from the object.
                                 console.log(bar + " : " + candidates[bar]);
                                 i++;
                                 if(i==numCandidates){
@@ -123,14 +128,32 @@ function canVote(){
                 console.log(result);
                 if(page == "main"){
                     if(result){
-                        loadVotePage();
+                        loadVotePage(); //Page functions implemented outside of this file.
                     } else {
                         validVoter();
                     }
                 }
             });
         }).catch(function(err) {
+<<<<<<< HEAD
+        console.log(err.message);
+        if (err.message == "Contract has not been deployed to detected network (network/artifact mismatch)") {
+            /*var div = document.createElement("div");
+            div.style.position = "absolute";
+            div.style.width = $(document).width;
+            div.style.height = $(document).height;
+            div.style.top = "0px";
+            div.style.left = "0px";
+            div.style.background = "black";
+            div.style.color = "black";
+            //div.style.opacity = 0.5;
+            div.innerHTML = "You don't have MetaMask! This is good. This means you're a sane human being. But you also need to get MetaMask.";
+
+            document.getElementById("metaMaskCover").appendChild(div);*/
+            
+=======
         if (err.message == "Contract has not been deployed to detected network (network/artifact mismatch)") {     
+>>>>>>> Final CSS changes and changes for final deployment onto blockchain
             document.getElementById("metaMaskCover").style.visibility = "visible";
         }
     });
@@ -144,8 +167,8 @@ function validVoter(){
         function(instance) {
             voteInstance = instance;
             voteInstance.validVoter.call().then(function(result){
-                if(result){
-                    loadResultPage();
+                if(result){ //If vote has deployed or not.
+                    loadResultPage(); //Page functions implemented outside of this file.
                 } else {
                     handleInvalidVoter();
                 }
@@ -183,7 +206,7 @@ function sendVote(candidate) {
     });
 }
 
-function getAddr(){
+function getAddr(){ //Tester fucntion; gets the address of the voter
     var voteInstance;
     contracts.Vote.deployed().then(
         function(instance) {
