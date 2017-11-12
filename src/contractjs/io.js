@@ -1,5 +1,15 @@
 function updateCounts(){
     console.log("Recieved vote data");
+
+    var i = 0;
+    var voteCounts = document.getElementsByClassName("result-p");
+     for (var key in candidates) {
+        if (candidates.hasOwnProperty(key)) {
+            voteCounts[i].innerHTML = candidates[key];
+            i++;
+        }
+    }
+    
     console.log(candidates);
 }
 

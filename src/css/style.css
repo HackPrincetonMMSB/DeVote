@@ -26,14 +26,14 @@
     }
 
     .result-p {
-        max-height: 303px;
+        max-height: 100%;
         display: flex;
-        margin-bottom: 30px;
         align-items: center;
-        font-size: 290px;
+        font-size: 200px;
         text-align: center;
         vertical-align: middle;
         border: 0px;
+        color: orange;
         padding: 0px;
     }
 
@@ -43,6 +43,11 @@
 
     #fh5co-work-section{
         padding-bottom:0px !important;
+    }
+
+    .result_row{
+        height: 160px;
+        margin-bottom: 1.5em;
     }
 
     a {
@@ -108,7 +113,7 @@
     }
     .fh5co-cover.fh5co-hero-2,
     .fh5co-hero.fh5co-hero-2 {
-        height: 300px;
+        height: 200px;
     }
     .fh5co-cover.fh5co-hero-2 .fh5co-overlay,
     .fh5co-hero.fh5co-hero-2 .fh5co-overlay {
@@ -149,7 +154,7 @@
         opacity: .9;
     }
     .fh5co-cover.fh5co-cover_2 {
-        height: 300px;
+        height: 200px;
     }
     @media screen and (max-width: 768px) {
         .fh5co-cover.fh5co-cover_2 {
