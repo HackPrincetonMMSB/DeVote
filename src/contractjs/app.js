@@ -135,25 +135,7 @@ function canVote(){
                 }
             });
         }).catch(function(err) {
-<<<<<<< HEAD
-        console.log(err.message);
-        if (err.message == "Contract has not been deployed to detected network (network/artifact mismatch)") {
-            /*var div = document.createElement("div");
-            div.style.position = "absolute";
-            div.style.width = $(document).width;
-            div.style.height = $(document).height;
-            div.style.top = "0px";
-            div.style.left = "0px";
-            div.style.background = "black";
-            div.style.color = "black";
-            //div.style.opacity = 0.5;
-            div.innerHTML = "You don't have MetaMask! This is good. This means you're a sane human being. But you also need to get MetaMask.";
-
-            document.getElementById("metaMaskCover").appendChild(div);*/
-            
-=======
         if (err.message == "Contract has not been deployed to detected network (network/artifact mismatch)") {     
->>>>>>> Final CSS changes and changes for final deployment onto blockchain
             document.getElementById("metaMaskCover").style.visibility = "visible";
         }
     });
