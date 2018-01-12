@@ -1,5 +1,5 @@
 # DeVote
-# Best First-Time Hack at the 2017 Hack Princeton hackathon. 
+*Best First-Time Hack at the 2017 Hack Princeton hackathon.*
 A decentralized Voting application built on the Ethereum blockchain.
 
 # What it does
